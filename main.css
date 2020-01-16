@@ -1,0 +1,25 @@
+/* 
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+
+.v-enter-to, .v-leave {
+  opacity: 1;
+}
+
+.v-enter-active, .v-leave-active{
+  transition: opacity 0.5s;
+} */
+
+/* .slideInLeft-enter-active, .slideInLeft-leave-active{
+  transition: opacity 0.5s;
+}
+
+.slideInLeft-enter, .slideInLeft-leave-to{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slideInLeft-enter-to, .slideInLeft-leave{
+  transform: translateX(0);
+} */

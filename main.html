@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Document</title>
+</head>
+<body>
+  
+<div id="app">
+  <button v-on:click="show = !show">表示を切り替える</button>
+  <transition name="zoom">
+      enter-active-class="animated zoomIn"
+      leave-active-class="animated zoomOut"
+    <p v-if="show">
+      吾輩は猫である。名前はまだ無い<br>
+      どこで生まれたかとんと見当がつかぬ<br>
+      なんでも薄暗いジメジメした所でニャーニャー泣いていた事だけは記憶している。
+    </p>
+  </transition>
+</div>
+<script src="https://jp.vuejs.org/js/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
