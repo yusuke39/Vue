@@ -71,44 +71,44 @@
 
 //main2.htmlに対しての記述
 
-var btnLoad = document.querySelector('#load');
+// var btnLoad = document.querySelector('#load');
 
-btnLoad.addEventListener('click', function(event){
+// btnLoad.addEventListener('click', function(event){
 
-  //1,xmlHttpRwquestのオブジェクトを生成
-  var xmlHttpRwquest = new XMLHttpRequest();
-  //2,通信状態の変化を監視するイベントハンドラ
-  xmlHttpRwquest.onreadystatechange = function(){
-    if(this.readyState == 4  /*&& this.status == 200*/){
-      console.log(this.readyState);
-      //受信したJSONを変数に格納する
-      var products = this.response;
-      console.log(products);
-      //商品リストの子ノードを全て削除する
-      var result = document.querySelector('#result');
-      result.textContent = '';
-      //商品の子ノードを全て削除する
-      for(var i = 0; i < products.length; i++){
-        var text = '商品ID:' + products[i].id;
-        text += ' 商品名:' + products[i].name;
-        text += ' 料金:'  + products[i].price;
-        text += ' 画像パス' + products[i].image;
-        text += ' 送料' + products[i].delv;
-        text += ' セール対象' + products[i].isSale;
-        var div = document.createElement('div');
-        div.textContent = text;
-        result.appendChild(div);
-      }
-    }
-  };
+//   //1,xmlHttpRwquestのオブジェクトを生成
+//   var xmlHttpRwquest = new XMLHttpRequest();
+//   //2,通信状態の変化を監視するイベントハンドラ
+//   xmlHttpRwquest.onreadystatechange = function(){
+//     if(this.readyState == 4  /*&& this.status == 200*/){
+//       console.log(this.readyState);
+//       //受信したJSONを変数に格納する
+//       var products = this.response;
+//       console.log(products);
+//       //商品リストの子ノードを全て削除する
+//       var result = document.querySelector('#result');
+//       result.textContent = '';
+//       //商品の子ノードを全て削除する
+//       for(var i = 0; i < products.length; i++){
+//         var text = '商品ID:' + products[i].id;
+//         text += ' 商品名:' + products[i].name;
+//         text += ' 料金:'  + products[i].price;
+//         text += ' 画像パス' + products[i].image;
+//         text += ' 送料' + products[i].delv;
+//         text += ' セール対象' + products[i].isSale;
+//         var div = document.createElement('div');
+//         div.textContent = text;
+//         result.appendChild(div);
+//       }
+//     }
+//   };
 
 
-  //3,レスポンスの形式を指定する
-  xmlHttpRwquest.responseType = 'json';
+//   //3,レスポンスの形式を指定する
+//   xmlHttpRwquest.responseType = 'json';
 
-  //4,リクエストメソッドと読み込みファイルのパスを指定する
-  xmlHttpRwquest.open('GET', 'products.json');
+//   //4,リクエストメソッドと読み込みファイルのパスを指定する
+//   xmlHttpRwquest.open('GET', 'products.json');
 
-  //5,リクエストを送信する（非同期通信を開始する
-  xmlHttpRwquest.send();
-});
+//   //5,リクエストを送信する（非同期通信を開始する
+//   xmlHttpRwquest.send();
+// });
