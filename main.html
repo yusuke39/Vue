@@ -32,6 +32,7 @@
         </div>
       </div>
     <!-- 商品一覧 -->
+      <div v-if="isError" class="error">{{message}}</div>
       <div class="list">
         <div class="item" v-for="product in filterdList" v-bind:key="product.id">
         <figure class="image">
@@ -54,6 +55,7 @@
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://jp.vuejs.org/js/vue.js"></script>
 <script src="main.js"></script>
 </body>
