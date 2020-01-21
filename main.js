@@ -59,6 +59,10 @@ var app = new Vue({
           //「セール対象」チェック有りで、セール対象商品でない場合
           isShow = false;//この商品は表示しない
         }
+        if(this.showNotSaleItem && this.products[i].isSale){
+          //「セール対象外」チェック有りで、セール商品ではない場合
+          isShow = false;//この商品は表示しない
+        }
         if(this.showDelvFree && this.products[i].delv > 0){
           //「送料無料」にチェック有りで、送料有りの商品の場合
           isShow = false;//この商品は表示しない
